@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-sudo npm -g install fish-pepper
+
+npm -g install fish-pepper
 
 cd $HOMEDIR
 mkdir -p $HOMEDIR/bin
