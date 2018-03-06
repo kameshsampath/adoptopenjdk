@@ -9,6 +9,6 @@ fi
 
 docker images | grep "$IMAGE_PREFIX" | awk '{n=$1":"$2; print n}' | while read -r i;
 do
-  docker push "${img}"
+  docker push "${i}"
 done
 
