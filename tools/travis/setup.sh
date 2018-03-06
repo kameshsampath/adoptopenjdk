@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-npm -g install fish-pepper
+sudo npm -g install fish-pepper
 
 sudo curl -L  https://github.com/aelsabbahy/goss/releases/download/v0.3.5/goss-linux-amd64 -o /usr/local/bin/goss
 sudo chmod +rx /usr/local/bin/goss
