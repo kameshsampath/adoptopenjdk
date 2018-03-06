@@ -1,0 +1,24 @@
+command:
+  java -version:
+    exit-status: 0
+    stdout: []
+    stderr:
+     - openjdk version "1.8.0-internal"
+     - Eclipse OpenJ9 VM
+    timeout: 1000
+  echo "$JAVA_HOME":
+    exit-status: 0
+    stdout:
+     - /opt/openjdk-1.8.0
+    stderr: []
+    timeout: 1000
+user:
+  openwhisk:
+    exists: true
+    uid: 1001
+    gid: 1001
+    shell: /sbin/nologin
+group:
+  openwhisk:
+    exists: true
+    gid: 1001

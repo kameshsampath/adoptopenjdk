@@ -1,0 +1,62 @@
+fish-pepper:
+  params:
+    - base
+    - version
+  name: "kameshsampath/java"
+  build: 1
+
+config:   
+  base:
+    default:
+      user: "openwhisk"
+    centos:
+      from: "centos:7"
+      version: "7"
+      description: "CentOS 7"
+      user: "openwhisk"
+    debian:
+      from: "buildpack-deps:trusty-curl"
+      version: "trusty-curl"
+      description: "Debian Trusty with Curl"
+      user: "openwhisk"
+  version:
+    openjdk8:
+      version: "1.8.0"
+      description: "AdoptOpenJDK Java8 OpenJ9"
+      major: 8
+      downloadURL: "https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/releases/download/jdk8u152-b16/OpenJDK8-OPENJ9_x64_Linux_jdk8u152-b16.tar.gz"
+      jdkPackageName: "OpenJDK8-OPENJ9_x64_Linux_jdk8u152-b16.tar.gz"
+      fish-pepper:
+        tags:
+        - latest
+        - jdk8u152-b16
+    openjdk9:
+      version: "1.9.0"
+      description: "AdoptOpenJDK Java OpenJ9"
+      major: 9
+      downloadURL: "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/jdk-9%2B181/OpenJDK9-OPENJ9_x64_Linux_jdk-9.181.tar.gz"
+      jdkPackageName: "OpenJDK9-OPENJ9_x64_Linux_jdk-9.181.tar.gz"
+      fish-pepper:
+        tags:
+        - latest
+        - jdk-9+181
+    openjdk8-hotspot:
+      version: "1.8.0"
+      description: "OpenJDK8 Hotspot"
+      major: 8
+      downloadURL: "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/jdk8u144-b01/OpenJDK8_x64_Linux_jdk8u144-b01.tar.gz"
+      jdkPackageName: "OpenJDK8_x64_Linux_jdk8u144-b01.tar.gz"
+      fish-pepper:
+        tags:
+        - latest
+        - jdk8u144-b01
+    openjdk9-hotspot:
+      version: "1.9.0"
+      description: "OpenJDK9 Java Hotspot"
+      major: 9
+      downloadURL: "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/jdk-9%2B181/OpenJDK9_x64_Linux_jdk-9.181.tar.gz"
+      jdkPackageName: "OpenJDK9_x64_Linux_jdk-9.181.tar.gz"
+      fish-pepper:
+        tags:
+        - latest
+        - jdk-9+181

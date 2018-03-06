@@ -1,0 +1,3 @@
+RUN apt-get install -y wget && \
+    groupadd -r {{= fp.config.base.user}} -g 1001 && \
+    useradd -u 1001 -r -g {{= fp.config.base.user}} -m -s /sbin/nologin -c "App User" {{= fp.config.base.user}}

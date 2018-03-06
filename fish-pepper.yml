@@ -1,0 +1,11 @@
+---
+fish-pepper:
+  registry: "docker.io"
+  repoUser: "kameshsampath"
+
+maintainer: "kamesh.sampath@hotmail.com"
+
+blocks:
+  - type: "git"
+    url: "https://github.com/fabric8io/run-java-sh.git"
+    path: "fish-pepper"

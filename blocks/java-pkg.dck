@@ -1,0 +1,7 @@
+RUN cd /tmp && \
+    wget --quiet {{= fp.config.version.downloadURL }} && \
+    sha256sum {{= fp.config.version.jdkPackageName }} && \
+    mkdir -p /opt/{{= 'openjdk-' + fp.config.version.version }} && \
+    tar --strip-components=2 -xf /tmp/{{= fp.config.version.jdkPackageName }} -C /opt/{{= 'openjdk-' + fp.config.version.version }}
+
+ENV JAVA_HOME=/opt/{{= 'openjdk-' + fp.config.version.version }}
