@@ -1,15 +1,10 @@
 #!/bin/bash
 set -e
 
-
 npm -g install fish-pepper
 
-mkdir -p $PWD/bin
+sudo curl -L  https://github.com/aelsabbahy/goss/releases/download/v0.3.5/goss-linux-amd64 -o /usr/local/bin/goss
+chmod +rx /usr/local/bin/goss
 
-curl -L  https://github.com/aelsabbahy/goss/releases/download/v0.3.5/goss-linux-amd64 -o $PWD/bin/goss
-chmod +rx $PWD/bin/goss
-
-curl -L  https://raw.githubusercontent.com/aelsabbahy/goss/v0.3.5/extras/dgoss/dgoss -o  $PWD/bin/dgoss
-chmod +rx $PWD/bin/dgoss
-
-export PATH=$PATH:$HOMEDIR/bin
+curl -L  https://raw.githubusercontent.com/aelsabbahy/goss/v0.3.5/extras/dgoss/dgoss -o  /usr/local/bin/dgoss
+chmod +rx /usr/local/bin/dgoss
