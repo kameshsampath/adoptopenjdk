@@ -1,0 +1,23 @@
+command:
+  java -version:
+    exit-status: 0
+    stdout: []
+    stderr:
+     - openjdk version "9-internal"
+    timeout: 1000
+  echo "$JAVA_HOME":
+    exit-status: 0
+    stdout:
+     - /opt/openjdk-1.9.0
+    stderr: []
+    timeout: 1000
+user:
+  openwhisk:
+    exists: true
+    uid: 1001
+    gid: 1001
+    shell: /sbin/nologin
+group:
+  openwhisk:
+    exists: true
+    gid: 1001

@@ -1,0 +1,13 @@
+sudo: required
+language: node_js
+node_js:
+  - "8"
+services:
+  - docker
+before_install:
+- "./tools/travis/setup.sh"
+install: true
+script:
+- "./tools/travis/docker-build.sh"
+- "./tools/travis/docker-push.sh"
+- "./tools/travis/docker-test.sh"

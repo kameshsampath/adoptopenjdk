@@ -1,3 +1,11 @@
+= OpenJDK Java Docker Images
 
-Install 
-https://github.com/fabric8io-images/fish-pepper
+This repository holds the AdoptOpenJDK Java Docker images that are based for `CentOS`
+and `Debian` platforms.
+
+The images are built using https://github.com/fabric8io-images/fish-pepper[fish-pepper] tool
+and pushed to docker hub.
+
+= NOTES
+
+* Never add tags with `+` symbol in it, docker is not allowing `+` symbols in tags
