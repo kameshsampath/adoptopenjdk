@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+SCRIPTDIR=$(cd $(dirname "$0") && pwd)
+ROOTDIR="$SCRIPTDIR/../.."
+HOMEDIR="$SCRIPTDIR/../../../"
+
 npm -g install fish-pepper
 
 cd $HOMEDIR
