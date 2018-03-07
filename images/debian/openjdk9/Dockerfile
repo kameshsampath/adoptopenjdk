@@ -2,8 +2,8 @@ FROM buildpack-deps:trusty-curl
 USER root
 
 RUN apt-get install -y wget && \
-    groupadd -r openwhisk -g 1001 && \
-    useradd -u 1001 -r -g openwhisk -m -s /sbin/nologin -c "App User" openwhisk
+    groupadd -r openwhisk -g 1000 && \
+    useradd -u 1000 -r -g openwhisk -m -s /sbin/nologin -c "App User" openwhisk
 
 RUN mkdir -p /app/data && \
   chmod 1777 /app/data
